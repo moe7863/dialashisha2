@@ -28,7 +28,7 @@ function CartDrawer({ isOpen, onClose }) {
           >
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-2xl font-bold">Your Cart</h2>
-              <button onClick={onClose} className="text-white text-2xl">&times;</button>
+              <button onClick={onClose} className="text-white text-3xl">&times;</button>
             </div>
             
             <div className="flex-1 overflow-y-auto space-y-4">
@@ -52,6 +52,15 @@ function CartDrawer({ isOpen, onClose }) {
       Proceed to Checkout
     </button>
   </Link>
+)}
+{/* Show Total Price */}
+{cartItems.length > 0 && (
+  <div className="mt-4 border-t border-gold pt-4">
+    <div className="flex justify-between text-lg font-semibold">
+      <span>Total</span>
+      <span>£{cartItems.reduce((sum, item) => sum + item.price, 0).toFixed(2)}</span>
+    </div>
+  </div>
 )}
           </motion.div>
         </>
