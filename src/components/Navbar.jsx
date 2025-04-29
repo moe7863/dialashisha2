@@ -67,6 +67,7 @@ export default function Navbar() {
         <div className="flex flex-col items-center gap-4 bg-dark text-gold py-4 md:hidden">
           <Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-white transition">Home</Link>
           <Link to="/products" onClick={() => setMenuOpen(false)} className="hover:text-white transition">Products</Link>
+          <Link to="/about" className="hover:text-white transition">About</Link>
         </div>
       )}
 
