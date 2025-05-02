@@ -20,6 +20,7 @@ export default function Navbar() {
         <div className="hidden md:flex gap-6 items-center">
           <Link to="/" className="hover:text-white transition">Home</Link>
           <Link to="/products" className="hover:text-white transition">Products</Link>
+          <Link to="/about" className="hover:text-white transition">About</Link>
           <motion.button
             whileTap={{ scale: 1.2 }}
             onClick={() => setIsCartOpen(true)}
